@@ -1,4 +1,4 @@
-##Node Operations
+## Node Operations
 ```powershell
 #Gets a list of nodes
 kubectl get nodes
@@ -14,19 +14,19 @@ kubectl delete namespace <namespace>
 kubectl create namespace <namespace>
 ```
 
-##Describe Operations
+## Describe Operations
 ```powershell
 #describe all the pods in a names space
 kubectl get pods -o wide --namespace sandbox
 ```
 
-##Logs
+## Logs
 ```powershell
 #tail a pod
 kubectl --namespace sandbox logs --follow <Pod name>
 ```
 
-##Iterate over a resource and do a thing
+## Iterate over a resource and do a thing
 ```powershell 
 kubectl get <resource> -n <namespace> -o name | xargs -I % kubectl <operation> -n <namespace>
 
