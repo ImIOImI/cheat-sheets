@@ -6,8 +6,7 @@ kubectl get nodes
 kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=<node name>
 ```
 
-
-##Namespace Operations
+## Namespace Operations
 ```powershell
 #delete a namespace and everything in it
 kubectl delete namespace <namespace>
