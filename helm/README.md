@@ -1,4 +1,4 @@
-###Updating helm
+### Updating helm
 It's my opinion that `upgrade --install` should be the default way helm interacts with k8s. It
 basically means "upgrade the package and if it doesn't exist install it."
 
