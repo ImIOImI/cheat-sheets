@@ -16,7 +16,7 @@ helm upgrade --install \
     --set <key>=<value> `
 ```
 
-###Debugging
+### Debugging
 ```shell script
 helm lint
 
