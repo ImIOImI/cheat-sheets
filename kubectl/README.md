@@ -35,4 +35,7 @@ kubectl get hpa -n auto -o name | xargs -I % kubectl delete % -n auto ; kubectl 
 
 #select all the pods where version label is v1 and add label foo=bar
 kubectl get pods -n dev -o name --selector=version=v1 | xargs -I % kubectl label % -n dev foo=bar
+
+#get all the deployments and restart them
+kubectl get deploy -n dev -o name | xargs -I % kubectl rollout restart % -n dev
 ```
