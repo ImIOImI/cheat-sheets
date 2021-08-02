@@ -38,8 +38,10 @@ kubectl get pods -n dev -o name --selector=version=v1 | xargs -I % kubectl label
 
 #get all the deployments and restart them
 kubectl get deploy -n dev -o name | xargs -I % kubectl rollout restart % -n dev
+```
 
 ## CRDs
+```powershell 
 #Get CRDs that are installed on the cluster
 kubectl get --raw /openapi/v2 > openapi.json
 
