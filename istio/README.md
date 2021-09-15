@@ -3,7 +3,9 @@
 `istoctl analyze -n <namespace>`
 
 Print a list of all the routes registered in the ingress gateway
-`istioctl proxy-config routes -n istio-system $(kubectl get pods -n istio-system -o name | grep istio-ingress -m1)`
+```
+istioctl proxy-config routes -n istio-system $(kubectl get pods -n istio-system -o name | grep istio-ingress -m1)
+```
 
 ## Debugging certs
 
