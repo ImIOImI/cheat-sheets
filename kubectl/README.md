@@ -48,3 +48,9 @@ kubectl get --raw /openapi/v2 > openapi.json
 kubectl get crds -o json
 kubectl get crds -o yaml
 ```
+
+## Launch Interactive Pod in a cluster
+This is great to test DNS and such inside the cluster
+```bash
+kubectl run -n api -i --tty --rm debug --image=ubuntu --restart=Never -- 
+```
