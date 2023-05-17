@@ -38,7 +38,7 @@ helm mapkubeapis RELEASE_NAME
 helm del RELEASE_NAME
 ```
 
-### kubeent
+### kubent
 install ` sh -c "$(curl -sSL https://git.io/install-kubent)"`
 #### find deprecated apis 
 ```shell script
