@@ -29,3 +29,18 @@ helm get manifest
 #Debug the entire deployment and output all the yaml to test.yaml
 helm template --debug . > test.yaml
 ```
+
+### mapkubeapis
+install [mapkubeapis](https://github.com/helm/helm-mapkubeapis)
+#### delete a helm release that is stuck in the uninstalling status
+```shell script
+helm mapkubeapis RELEASE_NAME
+helm del RELEASE_NAME
+```
+
+### kubeent
+install ` sh -c "$(curl -sSL https://git.io/install-kubent)"`
+#### find deprecated apis 
+```shell script
+kubent
+```
