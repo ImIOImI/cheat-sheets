@@ -37,6 +37,11 @@ install [mapkubeapis](https://github.com/helm/helm-mapkubeapis)
 helm mapkubeapis RELEASE_NAME
 helm del RELEASE_NAME
 ```
+#### iterate over all namespaces and map all charts
+```shell script
+kubectl get namespaces -o json | jq -r '.items[].metadata.name' | xargs -I % sh -c "helm list -n % -o json | jq -r '.[].name' | xargs -I @ helm mapkubeapis -n % @"
+```
+
 
 ### kubent
 install ` sh -c "$(curl -sSL https://git.io/install-kubent)"`
